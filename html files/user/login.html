@@ -1,150 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>user login</title>
-    <script src="https://kit.fontawesome.com/c661cc3120.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/c661cc3120.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
-        *{
-            margin: 0px;
-            padding: 0px;
-            font-family: 'Poppins',sans-serif;
-            box-sizing: border-box;
-        }
-        .container{
-            width: 100%;
-            height: 100vh;
-            background-image: linear-gradient(rgba(57, 55, 57, 0.8),rgba(253, 251, 253, 0.8)),url(https://media.istockphoto.com/id/1329433253/photo/living-room-interior-have-cabinet-for-tv-and-leather-armchair-in-cement-room-with-concrete.jpg?b=1&s=170667a&w=0&k=20&c=lXlBBcDJ3g5pWuVYFtk7s47udcqJtQtr0H7ZJJWhU9c=);
-            background-position: center;
-            background-size: cover;
-            position: relative;
-        }
-        .form-box{
-            width: 90%;
-            max-width: 450px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            background: #fff;
-            padding: 50px 60px 70px;
-            text-align: center;
-        }
-        .form-box h1{
-            font-size: 30px;
-            margin-bottom: 60px;
-            color: blueviolet;
-            position: relative;
-        }
-        .form-box h1::after{
-            content: "";
-            width: 40px;
-            height: 4px;
-            border-radius: 3px;
-            background:blueviolet;
-            position: absolute;
-            bottom: -12px;
-            left: 50%;
-            transform: translate(-50%);
-        }
-        .input-field{
-            background-color: #eaeaea;
-            margin: 15px 0;
-            border-radius: 3px;
-            display: flex;
-            align-items: center;
-            max-height: 65px;
-            transition: max-height 0.5s;
-            overflow: hidden;
-        }
-        input{
-            width: 100%;
-            background: transparent;
-            border: 0;
-            outline: 0;
-            padding:18px 15px;
-        }
-        .input-field i{
-            margin-left: 15px;
-            color: #999;
-        }
-        .btn-feild{
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-        }
-        .btn-feild button{
-            flex-basis: 48%;
-            background: blueviolet;
-            color: white;
-            height: 40px;
-            border-radius: 20px;
-            border: 0;
-            outline: 0;
-            cursor: pointer;
-            transition: background 1s;
-        }
-        .input-group{
-            height: 280px;
-        }
-        .btn-feild button.disable{
-            background: #eaeaea;
-            color: #555;
-
-        }
-
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Poppins", sans-serif;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(
+            rgba(57, 55, 57, 0.8),
+            rgba(253, 251, 253, 0.8)
+          ),
+          url(https://media.istockphoto.com/id/1329433253/photo/living-room-interior-have-cabinet-for-tv-and-leather-armchair-in-cement-room-with-concrete.jpg?b=1&s=170667a&w=0&k=20&c=lXlBBcDJ3g5pWuVYFtk7s47udcqJtQtr0H7ZJJWhU9c=);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+      }
+      .form-box {
+        width: 90%;
+        max-width: 450px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        padding: 50px 60px 70px;
+        text-align: center;
+      }
+      .form-box h1 {
+        font-size: 30px;
+        margin-bottom: 60px;
+        color: blueviolet;
+        position: relative;
+      }
+      .form-box h1::after {
+        content: "";
+        width: 40px;
+        height: 4px;
+        border-radius: 3px;
+        background: blueviolet;
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translate(-50%);
+      }
+      .input-field {
+        background-color: #eaeaea;
+        margin: 15px 0;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        max-height: 65px;
+        transition: max-height 0.5s;
+        overflow: hidden;
+      }
+      input {
+        width: 100%;
+        background: transparent;
+        border: 0;
+        outline: 0;
+        padding: 18px 15px;
+      }
+      .input-field i {
+        margin-left: 15px;
+        color: #999;
+      }
+      .btn-feild {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .btn-feild button {
+        flex-basis: 48%;
+        background: blueviolet;
+        color: white;
+        height: 40px;
+        border-radius: 20px;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        transition: background 1s;
+      }
+      .input-group {
+        height: 280px;
+      }
+      .btn-feild button.disable {
+        background: #eaeaea;
+        color: #555;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="form-box">
-            <h1 id="title">Sign Up</h1>
-            <form id="myform">
-                <div class="input-group">
-                    <div class="input-field" id="nameField">
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Name">
-                    </div>
-                    <div class="input-field">
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="text" placeholder="Email">
-                    </div>
-                    <div class="input-field">
-                        <i class="fa-solid fa-lock"></i>
-                        <input type="text" placeholder="Password">
-                    </div>
-                </div>
-                <div class="btn-feild">
-                    <button type="button" id="signupBtn">Sign up</button>
-                    <button type="button" id="signinBtn" class="disable">Sign in</button>
-                </div>
-            </form>
-        </div>
+      <div class="form-box">
+        <h1 id="title">Sign Up</h1>
+        <form id="myform">
+          <div class="input-group">
+            <div class="input-field" id="nameField">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" placeholder="Name" id="name" />
+            </div>
+            <div class="input-field">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="text" placeholder="Email" id="email" />
+            </div>
+            <div class="input-field">
+              <i class="fa-solid fa-lock"></i>
+              <input type="text" placeholder="Password" id="password" />
+            </div>
+          </div>
+          <div class="btn-feild">
+            <button type="button" id="signupBtn">Sign up</button>
+            <button type="button" id="signinBtn" class="disable">
+              Sign in
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-</body>
-<script>
+  </body>
+  <script>
+    let registeredUsers = JSON.parse(localStorage.getItem("registered")) || [];
     let signupBtn = document.getElementById("signupBtn");
     let signinBtn = document.getElementById("signinBtn");
     let nameField = document.getElementById("nameField");
     let title = document.getElementById("title");
     let form = document.getElementById("myform");
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let password = getElement("password");
 
-
-
-
-    signinBtn.onclick = function(){
-        nameField.style.maxHeight = "0";
-        title.innerHTML = "Sign In";
-        signupBtn.classList.add("disable");
-        signinBtn.classList.remove("disable");
+    function getElement(id) {
+      return document.getElementById(id);
     }
-    signupBtn.onclick = function(){
-        nameField.style.maxHeight = "60px";
-        title.innerHTML = "Sign Up";
-        signupBtn.classList.remove("disable");
-        signinBtn.classList.add("disable");
+
+    signinBtn.onclick = function () {
+      nameField.style.maxHeight = "0";
+      title.innerHTML = "Sign In";
+      signupBtn.classList.add("disable");
+      signinBtn.classList.remove("disable");
+      if (email.value != "" && password.value != "") {
+        let obj = {
+          email: email.value,
+          password: password.value,
+        };
+        registeredUsers = [...registeredUsers,obj]
+        if (isValid(obj)) {
+          email.value = "",
+          password.value = ""
+          localStorage.setItem('logedInUser',JSON.stringify(obj))
+          alert("Login successfull");
+          window.location.href = "./home.html";
+        } else {
+          alert("wrong email or password");
+        }
+      }
+    };
+    signupBtn.onclick = function () {
+      nameField.style.maxHeight = "60px";
+      title.innerHTML = "Sign Up";
+      signupBtn.classList.remove("disable");
+      signinBtn.classList.add("disable");
+      if (name.value != "" && email.value != "" && password != "") {
+        let obj = {
+          name: name.value,
+          email: email.value,
+          password: password.value,
+        };
+        if (!isExist(obj)) {
+          alert("User is Already exists with this email");
+        } else {
+          nameField.style.maxHeight = "0";
+          signupBtn.classList.add("disable");
+          signinBtn.classList.remove("disable");
+          localStorage.setItem(
+            "registered",
+            JSON.stringify([...registeredUsers, obj])
+          );
+          email.value = "";
+          password.value = "";
+          name.value = ""
+        }
+      }
+    };
+
+    function isExist(obj) {
+      for (let i = 0; i < registeredUsers.length; i++) {
+        if (registeredUsers[i].email === obj.email) {
+          return false;
+        }
+      }
+      return true;
     }
-</script>
+
+    function isValid(obj) {
+      for (let i = 0; i < registeredUsers.length; i++) {
+        if (
+          registeredUsers[i].email === obj.email &&
+          registeredUsers[i].password === obj.password
+        ) {
+          return true;
+        }
+      }
+      return false;
+    }
+  </script>
 </html>

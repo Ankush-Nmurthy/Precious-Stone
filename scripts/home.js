@@ -1,3 +1,6 @@
+import {data} from './my_data.js'
+let massage = data.filter((e)=>e.category === 'massage')
+console.log(massage)
 let prevBtn = document.getElementById("btn-1");
 let nextBtn = document.getElementById("btn-2");
 let imageInDiv = document.querySelector("#grid > div:nth-child(1)>img");
@@ -27,3 +30,30 @@ nextBtn.addEventListener("click",function(){
 add_to_cart.addEventListener("click",function(){
     
 })
+
+document.getElementById('searchinput').addEventListener('input',function(){
+     let value = document.getElementById('searchinput').value;
+     document.getElementById('content').style.display = 'block'
+     display(value)
+})
+
+function display(search=""){
+    if(search === ""){
+        document.getElementById('content').style.display = 'none'
+        return;
+    }
+    document.getElementById('content').innerHTML = null
+     massage.filter((e)=>e.name.toLowerCase().includes(search)).map((e)=>{
+        let div = document.createElement('div')
+         div.style.display = 'flex'
+         div.style.alignItems = 'center'
+         let name = document.createElement('h5');
+         name.textContent = e.name;
+       
+         let image = document.createElement('img')
+         image.src = e.image
+         image.style.width = '90px'
+         div.append(image,name)
+         document.getElementById('content').append(div)
+     })
+}
