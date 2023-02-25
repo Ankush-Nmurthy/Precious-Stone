@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Great+Vibes&family=Montserrat:wght@300&family=Poppins&display=swap');
+
+*{font-family: 'Poppins', sans-serif}
+
+#main{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 20px;
+}
+
+#sidebar{
+    background-color:  teal;
+}
+#products{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 45px;
+}
+#products > div{
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+img{
+    width: 100%;
+}
+button{
+    padding: 10px 30px 10px 30px;
+    border-radius: none;
+    background-color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover{
+    background-color: rgb(58, 58, 58);
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+

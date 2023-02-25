@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Great+Vibes&family=Montserrat:wght@300&family=Poppins&display=swap');
+
+*{font-family: 'Poppins', sans-serif}
+
+#main{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 50px;
+    width: 80%;
+    margin: auto;
+}
+
+#left{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+}
+
+#right{
+   padding: 20px;
+   text-align: center;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   height: 150px;
+}
+img{
+    width: 100px;
+}
+#left > div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:20px;
+    padding: 15px;
+    border: 0.5px solid black;
+}
+button{
+    padding: 10px 30px 10px 30px;
+    border-radius: none;
+    background-color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover{
+    background-color: rgb(58, 58, 58);
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+#total{
+    margin-left: 30px;
+}
