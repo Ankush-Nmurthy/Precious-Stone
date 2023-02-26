@@ -1,5 +1,5 @@
 import {data} from './my_data.js';
-let massage = data.filter((e)=>e.category === 'massage')
+let massage = data.filter((e)=>e.category === 'sleep')
 for(let i=1;i<=massage.length;i++){
     massage[i-1].id = i;
 }
@@ -57,6 +57,3 @@ function isPresent(ele){
    }
    return false;
 }
-
-let checkbox1 = document.getElementById("check-1");
-let checkbox2 = document.getElementById("check-1");

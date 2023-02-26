@@ -1,6 +1,7 @@
 let cartItems = JSON.parse(localStorage.getItem('cart')) || []
 let left = document.getElementById('left')
 let totalId = document.getElementById('total')
+let checkoutBtn = document.querySelector("#right > button");
 window.onload = function (){
     display(cartItems)
     let total = calTotal(cartItems);
@@ -61,9 +62,6 @@ function display(data){
     })
 }
 
-// function createElement(ele){
-//     return document.createElement(ele)
-// }
 
 function calTotal(cartItems){
     let sum = 0;
@@ -100,3 +98,7 @@ function sub(id){
    localStorage.setItem('cart',JSON.stringify(cartItems))
    console.log(cartItems);
 }
+
+checkoutBtn.addEventListener("click",function(){
+    alert("your order is successfully placed" +"\n" + "Thanks for placing the order" +"\n"+"Visit again")
+})

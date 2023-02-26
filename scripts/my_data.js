@@ -1,11 +1,11 @@
 export const  data = [
-    {"name" : "Osaki OS-4D EScape Massage","image":"https://cdn.shopify.com/s/files/1/0262/2226/4423/products/4d_escape_grey_1_800x.jpg?v=1672940531","price":7999,"category":"massage","subcateg":"massage"},
-    {"name" : "Osaki OS-4D Soho Massage","image":"https://cdn.shopify.com/s/files/1/0262/2226/4423/products/Pro-4D-Soho-II_Beige_2.jpg?v=1666104672","price":2799,"category":"massage","subcateg":"massage"},
+    {"name" : "Osaki OS-4D EScape Massage","image":"https://cdn.shopify.com/s/files/1/0262/2226/4423/products/4d_escape_grey_1_800x.jpg?v=1672940531","price":7999,"category":"massage","subcateg":"massage"},  
+    {"name" : "Osaki OS-4D Soho Massage","image":"https://cdn.shopify.com/s/files/1/0262/2226/4423/products/Pro-4D-Soho-II_Beige_2.jpg?v=1666104672","price":2799,"category":"massage","subcateg":"massage"}, 
     {"name" : "Osaki OS-4D Theramdic Massage","image":"https://cdn.shopify.com/s/files/1/0262/2226/4423/products/TheramedicLT-BK_BLACK_1_27409a48-9686-48b9-9066-fac4b38dd09c.jpg?v=1665084980","price":5999,"category":"massage","subcateg":"massage"},
     {"name" : "Theramdic Flex Massage","image":"https://cdn.shopify.com/s/files/1/0262/2226/4423/products/flex-bk_black_2_800x.jpg?v=1665088691","price":2199,"category":"massage","subcateg":"massage"},
     {"name" : "Sigma EScape Massage","image":"https://cdn.shopify.com/s/files/1/0262/2226/4423/products/Sigma-BK_1_800x.jpg?v=1665179772","price":2999,"category":"massage","subcateg":"foot & leg"},
-    {"name" : "Leg Massager","image":"https://cdn.shopify.com/s/files/1/0262/2226/4423/products/AIR_C_PRO_1_800x.jpg?v=1631115786","price":299,"category":"massage","subcateg":"foot & leg"},
-    {"name" : "Eye Massager","image":"https://cdn.shopify.com/s/files/1/0262/2226/4423/products/am_4602_kneading_eye_massager_white_2_800x.jpg?v=1653402394","price":84,"category":"massage","subcateg":"massage"},
+    {"name" : "Leg Massager","image":"https://cdn.shopify.com/s/files/1/0262/2226/4423/products/AIR_C_PRO_1_800x.jpg?v=1631115786","price":299,"category":"massage","subcateg":"foot & leg"},                          
+    {"name" : "Eye Massager","image":"https://cdn.shopify.com/s/files/1/0262/2226/4423/products/am_4602_kneading_eye_massager_white_2_800x.jpg?v=1653402394","price":84,"category":"massage","subcateg":"massage"},   
     {"name" : "Wavegun Massager","image":"https://cdn.shopify.com/s/files/1/0262/2226/4423/products/am_34_shiatsu_foot_massager_blue_2_800x.jpg?v=1659972529","price":59,"category":"massage","subcateg":"foot & leg"},
     {"name" : "Foldable Massager","image":"https://cdn.shopify.com/s/files/1/0262/2226/4423/products/gun-v-dbl_dark_blue_1_800x.jpg?v=1647043449","price":149,"category":"massage","subcateg":"massage"},
     {"name" : "Leg Massager","image":"https://cdn.shopify.com/s/files/1/0262/2226/4423/products/Fold_White_01.jpg?v=1609177621","price":299,"category":"massage","subcateg":"foot & leg"},
@@ -82,5 +82,5 @@ export const  data = [
     {"name" : "Neck massager","image":"https://cdn.shopify.com/s/files/1/0262/2226/4423/products/Quzy_Lifestyle_5_800x.jpg?v=1643851817","price":179,"category":"sleep","subcateg":"air quality"},
     {"name" : "Titan Heated massager","image":"https://cdn.shopify.com/s/files/1/0262/2226/4423/products/shiatsu-chair-bk_black_1.jpg?v=1665513927","price":349,"category":"sleep","subcateg":"air quality"}
 
-]
+];
 
