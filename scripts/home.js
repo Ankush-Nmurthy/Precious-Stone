@@ -1,5 +1,5 @@
 import {data} from './my_data.js'
-let massage = data.filter((e)=>e.category === 'massage')
+let massage = data
 console.log(massage)
 let prevBtn = document.getElementById("btn-1");
 let nextBtn = document.getElementById("btn-2");

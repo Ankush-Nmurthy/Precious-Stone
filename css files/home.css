@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Great+Vibes&family=Montserrat:wght@300&family=Poppins&display=swap');
 
 *{font-family: 'Poppins', sans-serif}
+
 body{
     box-sizing: border-box;
     width: 100%;
@@ -25,7 +26,6 @@ body{
     background-color:#f6f6fb;
 }
 #child-1>div{
-    /* border: 1px solid red; */
     width: 25%;
 }
 #child-2{
@@ -47,15 +47,29 @@ body{
     border: 1px solid rgb(216, 213, 213);
     outline: none;
 }
-#cont img:nth-child(1){
-    margin-left: 50%;
-}
-#cont>img{
-    width: 8%;
-    padding: 5px;
-    margin-top: 20px;
-}
 
+#cont{
+ display: flex;
+ align-items: center;
+ justify-content: flex-end;
+ margin-right: 40px;
+}
+#cont > a > img{
+  width:30px;
+  margin: 10px;
+}
+#hide1{
+  visibility: hidden;
+}
+#cont:hover > #hide1{
+  visibility: visible;
+}
+#hide1 > a >button{
+  background-color: rgb(207, 204, 204);
+  padding: 3px 5px;
+  border: transparent;
+
+}
 #child-2>ul{
     display: flex;
     padding: 0px 40px;
@@ -76,7 +90,6 @@ body>div:nth-child(1)>p{
     padding: 8px;
     margin-bottom: -0.2px;
 }
-
   #grid {
     width: 85%;
     display: grid;
@@ -107,7 +120,7 @@ body>div:nth-child(1)>p{
   #grid > div:nth-child(1)>#btn-2{
     position: absolute;
     top: 80%;
-    right: 10%;
+    right: 11%;
     transform: translate(-854%,-50%);
     background-color: transparent;
     color: white;

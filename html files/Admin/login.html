@@ -1,13 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin-page</title>
-</head>
-<body>
-    <h1>hello iam Admin</h1>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin login</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Poppins", sans-serif;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100%;
+        height: 100vh;
+        background-image: 
+        url("https://images.unsplash.com/photo-1566245172841-7fc57afb31d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzJ8fEFkbWluJTIwd2FsbHBhbGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60");
+        background-position: center;
+        background-size: cover;
+        position: relative;
+      }
+      .form-box {
+        width: 90%;
+        max-width: 450px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: linear-gradient(white,rgb(161, 161, 210));
+        padding: 50px 60px 70px;
+        text-align: center;
+      }
+      .form-box h1 {
+        font-size: 30px;
+        margin-bottom: 60px;
+        color: blueviolet;
+        position: relative;
+        z-index: 2;
+      }
+      .form-box h1::after {
+        content: "";
+        width: 40px;
+        height: 4px;
+        border-radius: 3px;
+        background: blueviolet;
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translate(-50%);
+      }
+      .input-field {
+        background-color: #eaeaea;
+        margin: 15px 0;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        max-height: 65px;
+        transition: max-height 0.5s;
+        overflow: hidden;
+      }
+      input {
+        width: 100%;
+        background: transparent;
+        border: 0;
+        outline: 0;
+        padding: 18px 15px;
+      }
+      .input-field i {
+        margin-left: 15px;
+        color: #999;
+      }
+      .btn-feild {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .btn-feild button {
+        flex-basis: 48%;
+        background: blueviolet;
+        color: white;
+        height: 40px;
+        border-radius: 20px;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        transition: background 1s;
+      }
+      #signinBtn:hover{
+        background-color: blueviolet;
+      }
+      .input-group {
+        height: 280px;
+      }
+      .btn-feild button.disable {
+        background: #eaeaea;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-box">
+        <h1 id="title">Sign In</h1>
+        <form id="myform">
+          <div class="input-group">
+            <div class="input-field">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="text" placeholder="Email" id="email" /> <!--email input-->
+            </div>
+            <div class="input-field">
+              <i class="fa-solid fa-lock"></i>
+              <input type="text" placeholder="Password" id="password" /> <!--password input-->
+            </div>
+          </div>
+          <div class="btn-feild">
+            <button type="button" id="signinBtn" class="disable">
+              Sign in
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script>
+    let emailinp = document.getElementById("email");
+    let passwordinp = document.getElementById("password");
+
+    let signinBut = document.getElementById("signinBtn");
+
+    signinBut.addEventListener("click",function(){
+        if(emailinp.value == "ankushn566@gmail.com" && passwordinp.value == "1234"){
+            window.location.href = "./dashboard.html";
+        }
+        else{
+            alert("incorrect email or password ")
+        }
+    })
+  </script>
 </body>
 </html>

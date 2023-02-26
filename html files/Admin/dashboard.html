@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../../css files/dashboard.css">
+</head>
+<body>
+    <!-- nav bar-->
+    <div id = "nav">
+        <div>
+            <img src="../../Precious Stone.jpg" alt="">
+        </div>
+        <div>
+            <h1>Admin</h1>
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2014/04/03/11/56/avatar-312603__340.png" alt="">
+            <span id="admin name" >Hello..!</span>
+            <span id="Logout">Logout</span>
+        </div>
+    </div>
+    <div id="main">
+        <div id="myform">
+            <h2>Add Items</h2>
+            <form id="form">
+                <label for="">Name Of Item</label> <br>
+                <input type="text" placeholder="Enter Product Name" id="name">
+                <br>
+                <label>Image Address</label> <br>
+                <input type="text" placeholder="Enter Product URL" id="image">
+                <br>
+                <label for="">Price</label> <br>
+                <input type="number" placeholder="Enter Price" id="price">
+                <br>
+                <label for="">Select Category</label> <br>
+                <select name="" id="select1">
+                    <option value="">Select Category</option>
+                    <option value="massage">Massage</option>
+                    <option value="sleep">Sleep</option>
+                </select>
+                <br>
+                <label for="">Sub-Category</label> <br>
+                <select name="" id="select2">
+                    <option value="">Select Category</option>
+                    <option value="massage">Massage</option>
+                    <option value="bedding">Bedding</option>
+                    <option value="air quality">Air Quality</option>
+                    <option value="foot & leg">Foot & Leg</option>
+                </select>
+                <br>
+                <input type="submit" value="submit" id="submit">
+            </form>
+        </div>
+        <div id="container">
+
+        </div>
+    </div>
+
+</body>
+<script src="../../scripts/admindashboard.js" type="module">
+</script>
+</html>

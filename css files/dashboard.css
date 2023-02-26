@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Great+Vibes&family=Montserrat:wght@300&family=Poppins&display=swap');
+
+*{font-family: 'Poppins', sans-serif}
+
+body{
+    padding: 0%;
+    margin: 0%;
+    background-color: #ECF2FF;
+}
+#nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(lightblue,rgb(241, 207, 207));
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+#nav > div >img{
+    height: 100px;
+}
+#nav > div:nth-child(3){
+    width:20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#nav > div:nth-child(3) > span{
+    color: rgb(61, 60, 60);
+    padding: 10px;
+    margin: 0px 10px;
+}
+#Logout:hover{
+    background-color: rgb(206, 175, 235);
+}
+#main{
+    margin: auto;
+    width:95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#container{
+    width: 58%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+    margin-bottom: 30px;
+}
+#container > div{
+    width:100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+    border: transparent;
+    border-radius: 10px;
+    padding: 5px;
+}
+#container > div >img{
+    width: 100%;
+    border-radius: 10px;
+}
+#myform{
+    width: 40%;
+    height: 570px;
+    border-radius: 10px;
+    background-image: linear-gradient(violet,white);
+}
+#myform > h2{
+    text-align: center;
+    margin-bottom: 8px;
+}
+#form > #name , #form > #image , #form > #price,#form > #select1,#form > #select2 {
+    margin: 10px;
+    width: 50%;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+} 
+#form > label{
+    margin-left: 10px;
+}
+#submit{
+    background-color: violet;
+    color: white;
+    padding: 10px;
+    width:120px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+#container > div > button{
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: #FF1E1E;
+    padding: 5px 10px 5px 10px;
+    border: transparent;
+    border-radius: 10px;
+    color: white;
+}
+#container > div >h3, #container > div >p{
+    margin-left: 10px;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+    #container{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #nav{
+        width: 100%;
+    }
+    #main{
+        display: block;
+    }
+    #main > #myform {
+        margin: auto;
+        width: 60%;
+    }
+    #container{
+        width: 80%;
+        margin: auto;
+    }
+    #main > #container{
+        margin: auto;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 499px) {
+    #container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #nav{
+        width: 100%;
+    }
+    #main{
+        display: block;
+    }
+    #main > #myform {
+        margin: auto;
+        width: 60%;
+    }
+    #container{
+        width: 80%;
+        margin: auto;
+    }
+    #main > #container{
+        margin: auto;
+        margin-top: 20px;
+    }
+}
