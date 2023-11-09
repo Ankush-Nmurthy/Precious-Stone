@@ -57,3 +57,31 @@ function isPresent(ele){
    }
    return false;
 }
+
+document.getElementById('searchinput').addEventListener('input',function(){
+    let value = document.getElementById('searchinput').value;
+    document.getElementById('content').style.display = 'block'
+    searchdisplay(value)
+})
+
+function searchdisplay(search=""){
+   console.log("inside search.")
+   if(search === ""){
+       document.getElementById('content').style.display = 'none'
+       return;
+   }
+   document.getElementById('content').innerHTML = null
+    massage.filter((e)=>e.name.toLowerCase().includes(search)).map((e)=>{
+       let div = document.createElement('div')
+        div.style.display = 'flex'
+        div.style.alignItems = 'center'
+        let name = document.createElement('h5');
+        name.textContent = e.name;
+      
+        let image = document.createElement('img')
+        image.src = e.image
+        image.style.width = '90px'
+        div.append(image,name)
+        document.getElementById('content').append(div)
+    })
+}

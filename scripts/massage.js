@@ -3,12 +3,18 @@ let massage = data.filter((e)=>e.category === 'massage')
 for(let i=1;i<=massage.length;i++){
     massage[i-1].id = i;
 }
+
+
+
+
+
 let cartItem = JSON.parse(localStorage.getItem('cart')) || []
 window.onload = display(massage)
 let sort = document.getElementById('sort');
 
 function display(data){
      document.getElementById('products').innerHTML = null
+     console.log(data);
      data.map((e)=>{
          let div = document.createElement('div');
 
@@ -58,5 +64,30 @@ function isPresent(ele){
    return false;
 }
 
-let checkbox1 = document.getElementById("check-1");
-let checkbox2 = document.getElementById("check-1");
+document.getElementById('searchinput').addEventListener('input',function(){
+    let value = document.getElementById('searchinput').value;
+    document.getElementById('content').style.display = 'block'
+    searchdisplay(value)
+})
+
+function searchdisplay(search=""){
+   console.log("inside search.")
+   if(search === ""){
+       document.getElementById('content').style.display = 'none'
+       return;
+   }
+   document.getElementById('content').innerHTML = null
+    massage.filter((e)=>e.name.toLowerCase().includes(search)).map((e)=>{
+       let div = document.createElement('div')
+        div.style.display = 'flex'
+        div.style.alignItems = 'center'
+        let name = document.createElement('h5');
+        name.textContent = e.name;
+      
+        let image = document.createElement('img')
+        image.src = e.image
+        image.style.width = '90px'
+        div.append(image,name)
+        document.getElementById('content').append(div)
+    })
+}
